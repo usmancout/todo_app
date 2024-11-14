@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.list {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffebcd; /* Light color for To do list */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.done {
+  background-color: #d3ffd3; /* Light green for Done list */
+}
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.task-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f0f8ff; /* Light blue color for item */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: move;
+}
+
+.delete-task-button {
+  padding: 5px 8px;
+  background-color: #ff4d4d; /* Red color for delete button */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-task-button:hover {
+  background-color: #e60000;
+}
+.background{
+  background-color: #ff6060;
+}

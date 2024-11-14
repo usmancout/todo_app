@@ -1,0 +1,24 @@
+<div class="container">
+  <!-- To Do List -->
+  <div class="list" cdkDropList [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)">
+    <h3>To Do</h3>
+    <div class="task-input-container">
+      <input
+        type="text"
+        placeholder="Add new task"
+        [(ngModel)]="newTodo"
+        (keyup.enter)="addTask('todo')"
+        class="task-input"
+      />
+      <button (click)="addTask('todo')" class="add-task-button">Add</button>
+    </div>
+    <div *ngFor="let item of todo; let i = index" class="item" cdkDrag>
+      {{ item }}
+      <button (click)="deleteTask('todo', i)" class="delete-task-button">Delete</button>
+      <button (click)="markAsDone(i)" class="done-task-button">Done</button>
+    </div>
+  </div>
+
+  <!-- Done List -->
+  <app-done [done]="done"></app-done>
+</div>

@@ -1,0 +1,7 @@
+<div class="list done" cdkDropList [cdkDropListData]="done" (cdkDropListDropped)="drop($event)">
+  <h3>Done</h3>
+  <div *ngFor="let item of done; let i = index" class="item" cdkDrag>
+    {{ item }}
+    <button (click)="deleteTask(i)" class="delete-task-button">Delete</button>
+  </div>
+</div>
